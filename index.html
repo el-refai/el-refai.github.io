@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="images/seal_icon.png">
+  <link rel="icon" type="image/png" href="media/seal_icon.png">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/niagara.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/niagara.png" class="hoverZoomLink"></a>
+              <a href="media/niagara.png"><img style="width:100%;max-width:100%" alt="profile photo" src="media/niagara.png" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -55,15 +55,35 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <!-- TODO: need to  -->
+    
           <!-- POGS -->
-          <tr>
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="images/pogs_splash.png" style="width: 100%; height: auto; max-width: 500px;">
+          <tr onmouseout="pogs_stop()" onmouseover="pogs_start()">
+            <td style="padding:20px;width:20%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='pogs_under'>
+                  <img src="media/pogs_pipeline.png" width=100%/>
+                </div>
+                <video  width=115% height=100% muted autoplay loop id="pogs_splash">
+                  <source src="media/pogs.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
               </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function pogs_start() {
+                  document.getElementById('pogs_splash').style.opacity = "0";
+                  document.getElementById('pogs_under').style.opacity = "1";
+                }
+
+                function pogs_stop() {
+                  document.getElementById('pogs_splash').style.opacity = "1";
+                  document.getElementById('pogs_under').style.opacity = "0";
+                }
+                pogs_stop()
+              </script>
             </td>
-            <td style="padding:20px;width:70%;vertical-align:middle">
+            <td style="padding:20px;width:75%;vertical-align:middle">
               <!-- TITLE -->
               <a href="https://berkeleyautomation.github.io/POGS/"><papertitle>POGS: Persistent Object Gaussian Splat for Tracking Human and Robot Manipulation of Irregularly Shaped Objects</papertitle></a>
               <br>
@@ -82,12 +102,33 @@
               POGS is a system that embeds semantics, self- supervised visual features, and object grouping features into a compact representation which enables online and persistent object tracking and manipulation by dynamically updating the POGS as objects move, without the need for scene recapture or retraining and only using a single stereo camera for tracking.
             </td>
           </tr>
+
           <!-- LEGS -->
-          <tr>
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="images/legs_splash.png" style="width: 100%; height: auto; max-width: 500px;">
+          <tr onmouseout="legs_stop()" onmouseover="legs_start()">
+            <td style="padding:20px;width:20%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='legs_under'>
+                  <img src="media/legs_splash.png" width=100%/>
+                </div>
+                <video  width=115% height=100% muted autoplay loop id="legs_splash">
+                  <source src="media/legs.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
               </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function legs_start() {
+                  document.getElementById('legs_splash').style.opacity = "0";
+                  document.getElementById('legs_under').style.opacity = "1";
+                }
+
+                function legs_stop() {
+                  document.getElementById('legs_splash').style.opacity = "1";
+                  document.getElementById('legs_under').style.opacity = "0";
+                }
+                legs_stop()
+              </script>
             </td>
             <td style="padding:20px;width:70%;vertical-align:middle">
               <!-- TITLE -->
@@ -112,7 +153,7 @@
           <tr>
             <td style="padding:20px;width:30%;vertical-align:middle">
               <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="images/swag_inference.png" style="width: 100%; height: auto; max-width: 500px;">
+                <img src="media/swag_inference.png" style="width: 100%; height: auto; max-width: 500px;">
               </div>
             </td>
             <td style="padding:20px;width:70%;vertical-align:middle">
@@ -133,12 +174,33 @@
               SWAG is a novel approach to storytelling with LLMs which reduces story writing to a search problem through a two-model feedback loop. SWAG can substantially outperform previous end-to-end story generation techniques when evaluated by GPT-4 and through human evaluation, and our SWAG pipeline using only open-source models surpasses GPT-3.5- Turbo. 
             </td>
           </tr>
+
           <!-- Gasket Assembly -->
-          <tr>
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="images/gasket_splash.png" style="width: 100%; height: auto; max-width: 500px;">
+          <tr onmouseout="gasket_stop()" onmouseover="gasket_start()">
+            <td style="padding:20px;width:20%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='gasket_under'>
+                  <img src="media/gasket_splash.png" width=100%/>
+                </div>
+                <video  width=115% height=100% muted autoplay loop id="gasket_splash">
+                  <source src="media/gasket.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
               </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function gasket_start() {
+                  document.getElementById('gasket_splash').style.opacity = "0";
+                  document.getElementById('gasket_under').style.opacity = "1";
+                }
+
+                function gasket_stop() {
+                  document.getElementById('gasket_splash').style.opacity = "1";
+                  document.getElementById('gasket_under').style.opacity = "0";
+                }
+                gasket_stop()
+              </script>
             </td>
             <td style="padding:20px;width:70%;vertical-align:middle">
               <!-- TITLE -->
@@ -153,6 +215,48 @@
               *Equal contribution
               <br>
               <a href="https://arxiv.org/abs/2408.12593">arXiv</a>
+              <p></p>
+            </td>
+          </tr>
+
+          <!-- Twincode -->
+          <tr onmouseout="twincode_stop()" onmouseover="twincode_start()">
+            <td style="padding:20px;width:20%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='twincode_under'>
+                  <img src="media/twincode.png" width=100%/>
+                </div>
+                <video  width=115% height=100% muted autoplay loop id="twincode_splash">
+                  <source src="media/twincode.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function twincode_start() {
+                  document.getElementById('twincode_splash').style.opacity = "0";
+                  document.getElementById('twincode_under').style.opacity = "1";
+                }
+
+                function twincode_stop() {
+                  document.getElementById('twincode_splash').style.opacity = "1";
+                  document.getElementById('twincode_under').style.opacity = "0";
+                }
+                twincode_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:70%;vertical-align:middle">
+              <!-- TITLE -->
+              <a href="https://twincode.netlify.app"><papertitle>Twincode: An Instrumented Platform for Pair Programming Research</papertitle></a>
+              <br>
+              <!-- AUTHORS -->
+              <b>Karim El-Refai</b>, Daewon Kwon, David Brincau, Asli Akalin, Armando Fox, Pablo Fernández Montes, Amador Durán Toro
+              <br>
+              <!-- CONFERENCE -->
+              <em>SIGCSE</em> 2023 (Demo)
+              <br>
+              <a href="https://dl.acm.org/doi/abs/10.1145/3545947.3573239">ACM</a>
               <p></p>
             </td>
           </tr>
