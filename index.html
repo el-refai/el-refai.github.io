@@ -1,278 +1,327 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-<head>
-  <!-- Google tag (gtag.js)
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4T4PFRZVD"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <head>
+    <title>Karim El-Refai</title>
 
-    gtag('config', 'G-S4T4PFRZVD');
-  </script> -->
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Usual metadata. -->
+    <meta name="author" content="Karim El-Refai">
+    <meta charset="UTF-8" />
+    <link href="./assets/sunset_small.jpeg" rel="shortcut icon" type="image/x-icon" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
 
-  <title>Karim El-Refai</title>
-  
-  <meta name="author" content="Karim El-Refai">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="media/seal_icon.png">
-</head>
+    <!-- Webfont. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Karim El-Refai</name>
-              </p>
-              <p>
-                I am a fourth year undergraduate student at UC Berkeley advised by Professor <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a>. 
-                I am interested in building perception systems for language-guided robot interaction and manipulation. 
-              </p>
-              <p style="text-align:center">
-                <a href="mailto:karim.el-refai@berkeley.edu">Email</a> &nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?user=OC3OLioAAAAJ&hl">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/karim-el-refai/">LinkedIn</a> &nbsp/&nbsp
-                <a href="resume.pdf">Resume</a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="media/niagara.png"><img style="width:100%;max-width:100%" alt="profile photo" src="media/niagara.png" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    
-          <!-- POGS -->
-          <tr onmouseout="pogs_stop()" onmouseover="pogs_start()">
-            <td style="padding:20px;width:20%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='pogs_under'>
-                  <img src="media/pogs_pipeline.png" width=100%/>
-                </div>
-                <video  width=115% height=100% muted autoplay loop id="pogs_splash">
-                  <source src="media/pogs.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+    <!-- Styles. -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body>
+    <div style="height: 4em"></div>
+    <section
+      style="
+        display: flex;
+        align-items: start;
+        gap: 2em 1.5em;
+        flex-wrap: wrap-reverse;
+      "
+    >
+      <div style="flex-grow: 1; flex-basis: 20em">
+        <h1>Karim El-Refai</h1>
+        <p>
+          I am a fourth year undergraduate student at <a href="https://www.berkeley.edu/">UC Berkeley</a> advised by Professor <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a> and I will be starting my Masters in EECS (Electrical Engineering and Computer Sciences) at Berkeley in Fall 2025.
+        </p>
+        <p>
+          I am interested in building perception systems for language-guided robot interaction and manipulation.
+        </p>
+        <p>
+          <a href="mailto:karim.el-refai@berkeley.edu">Email</a>
+          &nbsp;/&nbsp;
+          <a href="https://scholar.google.com/citations?hl=en&user=OC3OLioAAAAJ">Google Scholar</a>
+          &nbsp;/&nbsp;
+          <a href="https://www.linkedin.com/in/karim-el-refai/">LinkedIn</a>
+          &nbsp;/&nbsp;
+          <a href="resume.pdf">Resume</a>
+        </p>
+      </div>
+      <div style="display: block">
+        <img
+          src="./assets/niagara.png"
+          alt="A photo of the author"
+          style="
+            width: 12em;
+            height: auto;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 5%;
+          "
+        />
+      </div>
+    </section>
+    <section>
+      <h2>Research</h2>
+
+      <!-- Paper list will be dynamically generated here -->
+      <ul id="paper-list" style="margin-top: 1em" data-show-recent="false"></ul>
+      [ <a href="#" onclick="toggleRecentPapers(event)">Show older papers</a> ]
+
+      <!-- Generate paper list. -->
+      <script>
+        const papers = [
+        {
+            previewSrc: "./assets/r2r2r.mp4",
+            title: "Real2Render2Real: Scaling Robotic Manipulation Data Without Dynamics Simulation or Robot Hardware",
+            authors: [
+              "Justin Yu*",
+              "Letian Fu*",
+              "Huang Huang",
+              "Karim El-Refai",
+              "Rares Ambrus",
+              "Richard Cheng",
+              "Muhammad Zubair Irshad",
+              "Ken Goldberg",
+            ],
+            conference: "Under Review",
+            links: [
+              { text: "Website", url: "https://real2render2real.com" },
+              { text: "arXiv", url: "https://arxiv.org/abs/2505.09601" },
+            ],
+            summary: "Real2Render2Real is a system that scales robotic manipulation data without dynamics simulation or robot hardware by using a combination of real-world data, synthetic data, and a learned model to generate diverse and realistic manipulation data.",
+            highlighted: true,
+            recent: true,
+            new: true,
+          },
+          {
+            previewSrc: "./assets/omniscan.mp4",
+            title: "Omni-Scan: Creating Visually-Accurate Digital Twin Object Models Using a Bimanual Robot with Handoff and Gaussian Splat Merging",
+            authors: [
+              "Tianshuang Qiu*",
+              "Zehan Ma*",
+              "Karim El-Refai*",
+              "Hiya Shah",
+              "Justin Kerr",
+              "Chung Min Kim",
+              "Ken Goldberg",
+            ],
+            conference: "Under Review",
+            links: [
+              { text: "Website", url: "https://berkeleyautomation.github.io/omni-scan/" },
+              // { text: "arXiv", url: "https://arxiv.org/abs/2505.10000" },
+            ],
+            summary: "Omni-Scan uses a bimanual robot to pick up and scan objects from multiple viewpoints, then it hands off the object to the other arm getting views of previously occluded points. These scans are then merged into a single, visually-accurate 3DGS model.",
+            highlighted: false,
+            recent: true,
+            new: true,
+          },
+          {
+            previewSrc: "./assets/pogs.mp4",
+            title: "POGS: Persistent Object Gaussian Splat for Tracking Human and Robot Manipulation of Irregularly Shaped Objects",
+            authors: [
+              "Justin Yu*",
+              "Kush Hari*",
+              "Karim El-Refai*",
+              "Arnav Dalal",
+              "Justin Kerr",
+              "Chung Min Kim",
+              "Richard Cheng",
+              "Muhammad Zubair Irshad",
+              "Ken Goldberg",
+            ],
+            conference: "ICRA 2025, Oral Presentation",
+            links: [
+              { text: "Website", url: "https://berkeleyautomation.github.io/POGS/" },
+              { text: "arXiv", url: "https://arxiv.org/abs/2503.05189" },
+            ],
+            summary: "POGS is a system that embeds semantics, self-supervised visual features, and object grouping features into a compact representation which enables online and persistent object tracking and manipulation by dynamically updating the POGS as objects move, without the need for scene recapture or retraining and only using a single stereo camera for tracking.",
+            highlighted: true,
+            recent: true,
+            new: false,
+          },
+          {
+            previewSrc: "./assets/legs.mp4",
+            title: "LEGS: Incrementally Building Room-Scale Language-Embedded Gaussian Splats with a Mobile Robot",
+            authors: [
+              "Justin Yu*",
+              "Kush Hari*",
+              "Kishore Srinivas*",
+              "Karim El-Refai",
+              "Adam Rashid",
+              "Chung Min Kim",
+              "Justin Kerr",
+              "Richard Cheng",
+              "Ashwin Balakrishna",
+              "Thomas Kollar",
+              "Ken Goldberg",
+            ],
+            conference: "IROS 2024, Oral Presentation",
+            links: [
+              { text: "Website", url: "https://berkeleyautomation.github.io/LEGS/" },
+              { text: "arXiv", url: "https://arxiv.org/abs/2409.18108" },
+            ],
+            summary: "LEGS provides detailed 3D scene representation that encodes both appearance and semantics in a unified representation while being able to be trained online as a robot traverses its environment to enable localization of open-vocabulary object queries.",
+            recent: true,
+            new: false,
+          },
+          {
+            previewSrc: "./assets/swag_inference.png",
+            title: "SWAG: Storytelling With Action Guidance",
+            authors: [
+              "Zeeshan Patel*",
+              "Karim El-Refai*",
+              "Jonathan Pei*",
+              "Tianle Li",
+            ],
+            conference: "EMNLP Findings 2024",
+            links: [
+              { text: "arXiv", url: "https://arxiv.org/abs/2402.03483" },
+            ],
+            summary: "SWAG is a novel approach to storytelling with LLMs which reduces story writing to a search problem through a two-model feedback loop. SWAG can substantially outperform previous end-to-end story generation techniques when evaluated by GPT-4 and through human evaluation, and our SWAG pipeline using only open-source models surpasses GPT-3.5-Turbo.",
+            recent: true,
+            new: false,
+          },
+          {
+            previewSrc: "./assets/gasket.mp4",
+            title: "Automating Deformable Gasket Assembly",
+            authors: [
+              "Simeon Adebola*",
+              "Tara Sadjadpour*",
+              "Karim El-Refai*",
+              "Will Panitch",
+              "Zehan Ma",
+              "Roy Lin",
+              "Tianshuang Qiu",
+              "Shreya Ganti",
+              "Charlotte Le",
+              "Jaimyn Drake",
+              "Ken Goldberg",
+            ],
+            conference: "CASE 2024",
+            links: [
+              { text: "arXiv", url: "https://arxiv.org/abs/2408.12593" },
+            ],
+            summary: "Research on automating the assembly of deformable gaskets.",
+            recent: true,
+            new: false,
+          },
+          {
+            previewSrc: "./assets/twincode.mp4",
+            title: "Twincode: An Instrumented Platform for Pair Programming Research",
+            authors: [
+              "Karim El-Refai",
+              "Daewon Kwon",
+              "David Brincau",
+              "Asli Akalin",
+              "Armando Fox",
+              "Pablo Fernández Montes",
+              "Amador Durán Toro",
+            ],
+            conference: "SIGCSE 2023 (Demo)",
+            links: [
+              { text: "ACM", url: "https://dl.acm.org/doi/abs/10.1145/3545947.3573239" },
+              { text: "Website", url: "https://twincode.netlify.app" },
+            ],
+            summary: "A platform for conducting pair programming research.",
+            recent: false,
+            new: false,
+          },
+        ];
+        function generatePaperList() {
+          const paperList = document.getElementById("paper-list");
+          papers.forEach((paper) => {
+            const li = document.createElement("li");
+            if (paper.highlighted) {
+              li.classList.add("paper-highlighted");
+            }
+            if (paper.recent) {
+              li.classList.add("paper-recent");
+            }
+            li.classList.add("paper");
+            li.innerHTML = `
+              ${
+                paper.previewSrc.endsWith(".mp4")
+                  ? `<video class="paper-visual" src="${paper.previewSrc}" loop muted autoplay playsinline></video>`
+                  : `<img class="paper-visual" src="${paper.previewSrc}" alt="${paper.title}">`
+              }
+              <div class="paper-textual">
+                <h3>
+                  ${paper.title}
+                  ${paper.new ? '<img src="./assets/new_animated.gif" alt="Blinking icon that says \'new\'." />' : ""}
+                </h3>
+                <div style="height: 0.1em"></div>
+                ${paper.authors
+                  .map((author) => {
+                    const names = author.split(" ");
+                    const firstName = names.slice(0, -1).join("&nbsp;");
+                    const lastName = names[names.length - 1];
+                    const formattedName = `${firstName}&nbsp;${lastName}`;
+                    return author.startsWith("Karim El-Refai")
+                      ? `<strong>${formattedName}</strong>`
+                      : formattedName;
+                  })
+                  .join(", ")}.
+                <span style="font-weight: 450">${paper.conference.replace("Oral Presentation", '<span style="color: red">Oral Presentation</span>')}.</span>
+                <div style="height: 0.375em"></div>
+                ${paper.links
+                  .map((link) => `<a href="${link.url}">${link.text}</a>`)
+                  .join(" / ")}
+                <div style="height: 0.375em"></div>
+                <em style="opacity: 0.625">${paper.summary}</em>
               </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function pogs_start() {
-                  document.getElementById('pogs_splash').style.opacity = "0";
-                  document.getElementById('pogs_under').style.opacity = "1";
-                }
+            `;
+            paperList.appendChild(li);
+          });
+        }
 
-                function pogs_stop() {
-                  document.getElementById('pogs_splash').style.opacity = "1";
-                  document.getElementById('pogs_under').style.opacity = "0";
-                }
-                pogs_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://berkeleyautomation.github.io/POGS/"><papertitle>POGS: Persistent Object Gaussian Splat for Tracking Human and Robot Manipulation of Irregularly Shaped Objects</papertitle></a>
-              <br>
-              <!-- AUTHORS -->
-              Justin Yu*, Kush Hari*, <b>Karim El-Refai*</b>, Arnav Dalal, Justin Kerr, Chung Min Kim, Richard Cheng, Muhammad Zubair Irshad, Ken Goldberg 
-              <br>
-              *Equal contribution
-              <br>
-              <!-- CONFERENCE -->
-              <em>ICRA</em> 2025 (Under Review)
-              <!-- LINKS -->
-              <br>
-              <a href="https://berkeleyautomation.github.io/POGS/">Website (WIP)</a>
-              <p></p>
-              <!-- SUMMARY -->
-              POGS is a system that embeds semantics, self- supervised visual features, and object grouping features into a compact representation which enables online and persistent object tracking and manipulation by dynamically updating the POGS as objects move, without the need for scene recapture or retraining and only using a single stereo camera for tracking.
-            </td>
-          </tr>
+        document.addEventListener("DOMContentLoaded", generatePaperList);
 
-          <!-- LEGS -->
-          <tr onmouseout="legs_stop()" onmouseover="legs_start()">
-            <td style="padding:20px;width:20%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='legs_under'>
-                  <img src="media/legs_splash.png" width=100%/>
-                </div>
-                <video  width=115% height=100% muted autoplay loop id="legs_splash">
-                  <source src="media/legs.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function legs_start() {
-                  document.getElementById('legs_splash').style.opacity = "0";
-                  document.getElementById('legs_under').style.opacity = "1";
-                }
-
-                function legs_stop() {
-                  document.getElementById('legs_splash').style.opacity = "1";
-                  document.getElementById('legs_under').style.opacity = "0";
-                }
-                legs_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:70%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://berkeleyautomation.github.io/LEGS/"><papertitle>LEGS: Incrementally Building Room-Scale Language-Embedded Gaussian Splats with a Mobile Robot</papertitle></a>
-              <br>
-              <!-- AUTHORS -->
-              Justin Yu*, Kush Hari*, Kishore Srinivas*, <b>Karim El-Refai</b>, Adam Rashid, Chung Min Kim, Justin Kerr, Richard Cheng, Ashwin Balakrishna, Thomas Kollar, Ken Goldberg
-              <br>
-              *Equal contribution
-              <br>
-              <!-- CONFERENCE -->
-              <em>IROS</em> 2024 <font color="red"><strong>(Oral Presentation)</strong></font>
-              <!-- LINKS -->
-              <br>
-              <a href="https://arxiv.org/abs/2409.18108">arXiv</a> / <a href="https://berkeleyautomation.github.io/LEGS/">Website</a>
-              <p></p>
-              <!-- SUMMARY -->
-              LEGS provides detailed 3D scene representation that encodes both appearance and semantics in a unified representation while being able to be trained online as a robot traverses its environment to enable localization of open-vocabulary object queries.
-            </td>
-          </tr>
-          <!-- SWAG -->
-          <tr>
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="media/swag_inference.png" style="width: 100%; height: auto; max-width: 500px;">
-              </div>
-            </td>
-            <td style="padding:20px;width:70%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://arxiv.org/abs/2402.03483"><papertitle>SWAG: Storytelling With Action Guidance</papertitle></a>
-              <br>
-              <!-- AUTHORS -->
-              Zeeshan Patel*, <b>Karim El-Refai*</b>, Jonathan Pei*, Tianle Li
-              <br>
-              *Equal contribution
-              <br>
-              <!-- CONFERENCE -->
-              <em>EMNLP Findings</em> 2024
-              <br>
-              <a href="https://arxiv.org/abs/2402.03483">arXiv</a>
-              <p></p>
-              <!-- SUMMARY -->
-              SWAG is a novel approach to storytelling with LLMs which reduces story writing to a search problem through a two-model feedback loop. SWAG can substantially outperform previous end-to-end story generation techniques when evaluated by GPT-4 and through human evaluation, and our SWAG pipeline using only open-source models surpasses GPT-3.5- Turbo. 
-            </td>
-          </tr>
-
-          <!-- Gasket Assembly -->
-          <tr onmouseout="gasket_stop()" onmouseover="gasket_start()">
-            <td style="padding:20px;width:20%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='gasket_under'>
-                  <img src="media/gasket_splash.png" width=100%/>
-                </div>
-                <video  width=115% height=100% muted autoplay loop id="gasket_splash">
-                  <source src="media/gasket.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function gasket_start() {
-                  document.getElementById('gasket_splash').style.opacity = "0";
-                  document.getElementById('gasket_under').style.opacity = "1";
-                }
-
-                function gasket_stop() {
-                  document.getElementById('gasket_splash').style.opacity = "1";
-                  document.getElementById('gasket_under').style.opacity = "0";
-                }
-                gasket_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:70%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://arxiv.org/abs/2408.12593"><papertitle>Automating Deformable Gasket Assembly</papertitle></a>
-              <br>
-              <!-- AUTHORS -->
-              Simeon Adebola*, Tara Sadjadpour*, <b>Karim El-Refai*</b>, Will Panitch, Zehan Ma, Roy Lin, Tianshuang Qiu, Shreya Ganti, Charlotte Le, Jaimyn Drake, Ken Goldberg
-              <br>
-              <!-- CONFERENCE -->
-              <em>CASE</em> 2024
-              <br>
-              *Equal contribution
-              <br>
-              <a href="https://arxiv.org/abs/2408.12593">arXiv</a>
-              <p></p>
-            </td>
-          </tr>
-
-          <!-- Twincode -->
-          <tr onmouseout="twincode_stop()" onmouseover="twincode_start()">
-            <td style="padding:20px;width:20%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='twincode_under'>
-                  <img src="media/twincode.png" width=100%/>
-                </div>
-                <video  width=115% height=100% muted autoplay loop id="twincode_splash">
-                  <source src="media/twincode.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function twincode_start() {
-                  document.getElementById('twincode_splash').style.opacity = "0";
-                  document.getElementById('twincode_under').style.opacity = "1";
-                }
-
-                function twincode_stop() {
-                  document.getElementById('twincode_splash').style.opacity = "1";
-                  document.getElementById('twincode_under').style.opacity = "0";
-                }
-                twincode_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:70%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://twincode.netlify.app"><papertitle>Twincode: An Instrumented Platform for Pair Programming Research</papertitle></a>
-              <br>
-              <!-- AUTHORS -->
-              <b>Karim El-Refai</b>, Daewon Kwon, David Brincau, Asli Akalin, Armando Fox, Pablo Fernández Montes, Amador Durán Toro
-              <br>
-              <!-- CONFERENCE -->
-              <em>SIGCSE</em> 2023 (Demo)
-              <br>
-              <a href="https://dl.acm.org/doi/abs/10.1145/3545947.3573239">ACM</a>
-              <p></p>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <p>
-                Source code taken from <a href="https://jonbarron.info/">Jon Barron's site.</a>
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
-</body>
-
+        function toggleRecentPapers(event) {
+          event.preventDefault();
+          const paperList = document.getElementById("paper-list");
+          const showRecent = paperList.dataset.showRecent === "true";
+          paperList.dataset.showRecent = (!showRecent).toString();
+          event.target.textContent = showRecent
+            ? "Show older papers"
+            : "Hide older papers";
+        }
+      </script>
+    </section>
+    <section>
+      <h2>Misc</h2>
+      <p> I like sunsets. Every year from Berkeley, in early November, the sun sets over the golden gate:</p>
+      <div style="display: block">
+        <img
+          src="./assets/sunset_small.jpeg"
+          alt="A photo of a sunset over the golden gate, taken by the author"
+          style="
+            width: 13em;
+            height: auto;
+            aspect-ratio: 1.5;
+            object-fit: cover;
+            border-radius: 5%;
+          "
+        />
+      </div>
+    </section>
+    <div style="height: 1em"></div>
+    <section>
+      <em style="color: #777">
+        Website design borrows from
+        <a href="https://jonbarron.info/">Jon Barron</a> and
+        <a href="https://brentyi.github.io/">Brent Yi</a>.
+      </em>
+    </section>
+    <div style="height: 2em"></div>
+  </body>
 </html>
