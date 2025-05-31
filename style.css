@@ -92,7 +92,7 @@ body {
     margin: 0;
   }
   
-  #paper-list li .paper-visual {
+  /* #paper-list li .paper-visual {
     width: 13em;
     height: 9.5em;
     object-fit: cover;
@@ -100,18 +100,39 @@ body {
     display: block;
     border-radius: 1px;
     border-radius: 0.2em;
-  }
+  } */
 
   /* has the video aspect ratio fixed but looks meh */
-  /* #paper-list li .paper-visual {
-    width: 13em;
+  #paper-list li .paper-visual {
+    width: 20em;
     height: auto;
     aspect-ratio: 16/9;
     object-fit: contain;
     overflow: hidden;
     display: block;
     border-radius: 0.2em;
-  } */
+  }
+
+  /* Mobile styles */
+  @media screen and (max-width: 768px) {
+    #paper-list li {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    #paper-list li .paper-visual {
+      width: 100%;
+      max-width: 30em;
+      margin: 0 auto;
+    }
+
+    #paper-list li .paper-textual {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
   #paper-list li .paper-visual * {
     display: none;
   }
