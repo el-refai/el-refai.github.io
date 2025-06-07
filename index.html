@@ -307,6 +307,105 @@
         <li>DATA C88C: Computational Structures in Data Science in Spring 2024, Fall 2023, Spring 2023</li>
       </ul>
     </section>
+    <section>
+      <h2>Misc</h2>
+      <p>I also like photography. Taken on Sony α7ii, Minolta X-700, and Canon EOS 60D.</p>
+      <div class="gallery">
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/a7ii_1.jpg" alt="Photography 1" />
+        </div>
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/a7ii_2.jpg" alt="Photography 2" />
+        </div>
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/a7ii_3.jpeg" alt="Photography 3" />
+        </div>
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/x700_1.jpg" alt="Photography 4" />
+        </div>
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/x700_2.jpg" alt="Photography 5" />
+        </div>
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/x700_3.jpg" alt="Photography 6" />
+        </div>
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/x700_4.jpg" alt="Photography 7" />
+        </div>
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/x700_5.jpg" alt="Photography 8" />
+        </div>
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/x700_6.jpg" alt="Photography 9" />
+        </div>
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/60d_1.jpg" alt="Photography 10" />
+        </div>
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/60d_2.jpg" alt="Photography 11" />
+        </div>
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/60d_3.jpg" alt="Photography 12" />
+        </div>
+        <div class="gallery-item small" onclick="openLightbox(this)">
+          <img src="./assets/misc/60d_4.jpg" alt="Photography 13" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox container -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+      <button class="lightbox-arrow left" onclick="navigateImage(-1, event)">❮</button>
+      <img id="lightbox-img" src="" alt="Full size image">
+      <button class="lightbox-arrow right" onclick="navigateImage(1, event)">❯</button>
+    </div>
+
+    <script>
+      let currentImageIndex = 0;
+      const galleryImages = document.querySelectorAll('.gallery-item img');
+
+      function openLightbox(element) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const img = element.querySelector('img');
+        
+        // Find the index of the clicked image
+        currentImageIndex = Array.from(galleryImages).indexOf(img);
+        
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+      }
+
+      function closeLightbox(event) {
+        // Only close if clicking the background, not the image or arrows
+        if (event.target.classList.contains('lightbox')) {
+          const lightbox = document.getElementById('lightbox');
+          lightbox.style.display = 'none';
+          document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+      }
+
+      function navigateImage(direction, event) {
+        event.stopPropagation(); // Prevent closing when clicking arrows
+        
+        currentImageIndex = (currentImageIndex + direction + galleryImages.length) % galleryImages.length;
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = galleryImages[currentImageIndex].src;
+      }
+
+      // Close lightbox with escape key
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeLightbox({ target: document.getElementById('lightbox') });
+        } else if (event.key === 'ArrowLeft') {
+          navigateImage(-1, { stopPropagation: () => {} });
+        } else if (event.key === 'ArrowRight') {
+          navigateImage(1, { stopPropagation: () => {} });
+        }
+      });
+    </script>
+
     <div style="height: 1em"></div>
     <section>
       <em style="color: #777">
